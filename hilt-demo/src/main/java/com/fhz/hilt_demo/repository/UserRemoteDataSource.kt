@@ -1,5 +1,6 @@
 package com.fhz.hilt_demo.repository
 
+import com.fhz.hilt_demo.service.FengApi
 import com.fhz.hilt_demo.service.UserApi
 import javax.inject.Inject
 
