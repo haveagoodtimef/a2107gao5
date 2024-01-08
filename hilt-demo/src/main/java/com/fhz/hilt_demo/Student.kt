@@ -7,6 +7,7 @@ import javax.inject.Inject
  * @author Mr.Feng
  * 简述: TODO
  */
+
 class Student @Inject constructor() {
     var name = "fenghaha"
 }
