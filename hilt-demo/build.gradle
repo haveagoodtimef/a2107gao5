@@ -1,14 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id "kotlin-kapt"
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace 'com.fhz.a2107'
+    namespace 'com.fhz.hilt_demo'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.fhz.a2107"
+        applicationId "com.fhz.hilt_demo"
         minSdk 29
         targetSdk 33
         versionCode 1
@@ -30,17 +32,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
-    viewBinding {
-        enabled = true
-    }
 }
 
 dependencies {
 
-//    //livedata
-//    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
-
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
@@ -48,4 +45,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+kapt {
+    correctErrorTypes = true
 }
