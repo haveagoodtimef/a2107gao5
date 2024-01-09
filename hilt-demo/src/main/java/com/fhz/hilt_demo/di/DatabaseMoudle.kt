@@ -34,7 +34,9 @@ class DatabaseMoudle {
     @Provides
     @Singleton
     fun provideUserDao1(appDatabase: AppDatabase): UserDao {
+        //分
         return appDatabase.userDao()
+
     }
 
 }
