@@ -2,6 +2,7 @@ package com.fhz.hilt_demo
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.fhz.hilt_demo.db.User
 import com.fhz.hilt_demo.repository.UserLocalDataSource
 import com.fhz.hilt_demo.repository.UserRemoteDataSource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -25,5 +26,12 @@ class MainViewModel @Inject constructor(
             userlocalDataSource.run { userRemoteDataSource.getUserInfo() }
         }
         println("test")
+    }
+
+    suspend fun getUserFromDB() : List<User>{
+        viewModelScope.launch {
+
+        }
+         return userlocalDataSource.getUser()
     }
 }

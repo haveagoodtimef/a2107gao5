@@ -1,6 +1,5 @@
 package com.fhz.hilt_demo.service
 
-import com.fhz.hilt_demo.User
 import com.fhz.hilt_demo.bean.response.Banner
 import retrofit2.http.GET
 import retrofit2.http.Query

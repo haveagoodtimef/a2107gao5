@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "a2107"
 include ':app'
 include ':hilt-demo'
+include ':mvi'

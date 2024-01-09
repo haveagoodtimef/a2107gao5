@@ -1,4 +1,4 @@
-package com.fhz.hilt_demo
+package com.fhz.mvi
 
 import org.junit.Test
 
@@ -14,6 +14,4 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
-
-
 }
