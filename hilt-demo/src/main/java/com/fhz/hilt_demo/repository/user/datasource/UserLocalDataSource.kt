@@ -1,4 +1,4 @@
-package com.fhz.hilt_demo.repository
+package com.fhz.hilt_demo.repository.user.datasource
 
 import com.fhz.hilt_demo.db.AppDatabase
 import com.fhz.hilt_demo.db.User

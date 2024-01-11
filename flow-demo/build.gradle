@@ -1,16 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id "kotlin-kapt"
-    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace 'com.fhz.mvi'
+    namespace 'com.fhz.flow_demo'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.fhz.mvi"
+        applicationId "com.fhz.flow_demo"
         minSdk 29
         targetSdk 33
         versionCode 1
@@ -32,35 +30,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    viewBinding {
-        enabled = true
-    }
 }
 
 dependencies {
-    //viewmodels fragment
-    implementation 'androidx.fragment:fragment-ktx:1.5.6'
-    implementation 'androidx.activity:activity-ktx:1.7.2'
 
-    //retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    //logging
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
-
-
-    //协程
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-
-    def room_version = "2.5.1"
-//
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
-    kapt("androidx.room:room-compiler:$room_version")
-
-
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation "androidx.activity:activity-ktx:1.6.0"
+    implementation "androidx.fragment:fragment-ktx:1.5.3"
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
